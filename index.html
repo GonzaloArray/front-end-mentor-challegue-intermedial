@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Multi-step form</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body class="body container-body">
+    <header class="header">
+        <img loading="lazy" class="header__img" src="./assets/images/bg-sidebar-mobile.svg" alt="Imagen slider">
+        <section class="header__flex header__position">
+            <button class="header__btn next active">
+                1
+            </button>
+
+            <button class="header__btn next">
+                2
+            </button>
+
+            <button class="header__btn next">
+                3
+            </button>
+
+            <button class="header__btn next">
+                4
+            </button>
+        </section>
+    </header>
+    <main class="main container">
+        <div class="desktop__flex">
+            <aside class="aside">
+                <img class="aside__img" loading="lazy" src="./assets/images/bg-sidebar-desktop.svg" alt="Aside banner">
+
+                <section class="header__flex header__position">
+                    <button type="button" class="header__btn">
+                        <div class="header__edit__btn">
+                            <p class="header__btn__desktop next active">1</p>
+                            <div>
+                                <h2 class="aside__step next">STEP 1</h2>
+                                <p class="aside__info">YOUR INFO</p>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="header__btn">
+                        <div class="header__edit__btn">
+                            <p class="header__btn__desktop next">2</p>
+                            <div>
+                                <h2 class="aside__step">STEP 2</h2>
+                                <p class="aside__info">SELECT PLAN</p>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="header__btn">
+                        <div class="header__edit__btn">
+                            <p class="header__btn__desktop next">3</p>
+                            <div>
+                                <h2 class="aside__step">STEP 3</h2>
+                                <p class="aside__info">ADD-ONS</p>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="header__btn">
+                        <div class="header__edit__btn">
+                            <p class="header__btn__desktop next">4</p>
+                            <div>
+                                <h2 class="aside__step">STEP 4</h2>
+                                <p class="aside__info">SUMMARY</p>
+                            </div>
+                        </div>
+                    </button>
+                </section>
+
+            </aside>
+            <div class="container__desktop main__desktop__flex">
+                <section class="main__tabInfo formulario-1">
+
+                    <form id="formulario">
+                        <!-- Step 1 -->
+<!--                         <section class="step step__active">
+                            <h1 class="tabInfo__title">Personal info</h1>
+                            <p class="tabInfo__description margin__top margin__bottom">Please provide your name, email
+                                address, and phone number.</p>
+                            <div class="formulario__flex">
+                                <div class="formulario__input">
+                                    <div class="general-error"></div>
+                                    <div class="error-form">
+                                        <label for="name">Name</label>
+                                        <div class="name-error"></div>
+                                    </div>
+                                    <input class="form__input" name="name" id="name" type="text"
+                                        placeholder="e.g Stephen King">
+                                </div>
+                                <div class="formulario__input">
+                                    <div class="error-form">
+                                        <label for="email">Email Address</label>
+                                        <div class="email-error"></div>
+                                    </div>
+                                    <input class="form__input" name="email" id="email" type="email"
+                                        placeholder="e.g stephenking@lorem.com">
+                                </div>
+                                <div class="formulario__input">
+                                    <div class="error-form">
+                                        <label for="tel">Phone Number</label>
+                                        <div class="tel-error"></div>
+                                    </div>
+                                    <input class="form__input" name="tel" id="tel" type="tel"
+                                        placeholder="e.g + 1234 567 890">
+                                </div>
+
+                                <div class="desktop__flex__btn">
+                                    <div></div>
+                                    <button type="button" class="desktop__btn__submit button__desktop">
+                                        Next Step
+                                    </button>
+                                </div>
+                            </div>
+                        </section> -->
+
+                        <!-- step 2 -->
+                        <section class="step step__active">
+                            <h1 class="tabInfo__title">Select your plan</h1>
+                            <p class="tabInfo__description margin__top margin__bottom">You have the option of monthly or yearly billing.</p>
+                            <div class="formulario__flex">
+                                <section class="formulario__flex__step2">
+                                    <div class="step__relative">
+                                        <input type="radio" name="arcade" id="arcade" checked>
+                                        <label class="step2__radiobutton" for="arcade">
+                                            <img src="./assets/images/icon-arcade.svg" alt="Arcade">
+                                            <div class="radio__flex">
+                                                <h2 class="radio__title">Arcade</h2>
+                                                <p class="radio__descrip">$9/mo</p>
+                                                <p class="radio__desktop">2 months free</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="step__relative">
+                                        <input type="radio" name="arcade" id="advance">
+                                        <label class="step2__radiobutton" for="advance">
+                                            <img src="./assets/images/icon-advanced.svg" alt="Arcade">
+                                            <div class="radio__flex">
+                                                <h2 class="radio__title">Advanced</h2>
+                                                <p class="radio__descrip">$12/mo</p>
+                                                <p class="radio__desktop">2 months free</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="step__relative">
+                                        <input type="radio" name="arcade" id="pro">
+                                        <label class="step2__radiobutton" for="pro">
+                                            <img src="./assets/images/icon-pro.svg" alt="Arcade">
+                                            <div class="radio__flex">
+                                                <h2 class="radio__title">Pro</h2>
+                                                <p class="radio__descrip">$15/mo</p>
+                                                <p class="radio__desktop">2 months free</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </section>
+                                <section class="checkbox__flex">
+                                    <h2 class="check__title">Monthly</h2>
+                                    <div class="button r" id="button-2">
+                                        <input type="checkbox" class="checkbox" />
+                                        <div class="knobs"></div>
+                                        <div class="layer"></div>
+                                    </div>
+                                    <h2 class="check__title">Yearly</h3>
+
+                                </section>
+
+                                <div class="desktop__flex__btn">
+                                    <button type="button" class="desktop__btn__submit button__desktop__back">
+                                        Go back
+                                    </button>
+                                    <button type="button" class="desktop__btn__submit button__desktop">
+                                        Next Step
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- step 3 -->
+                        <section class="step">
+                            <div class="formulario__flex">
+                                <div class="formulario__input">
+                                    <div class="general-error"></div>
+                                    <div class="error-form">
+                                        <label for="name">Name</label>
+                                        <div class="name-error"></div>
+                                    </div>
+                                    <input class="form__input" name="name" id="name" type="text"
+                                        placeholder="e.g Stephen King">
+                                </div>
+                                <div class="formulario__input">
+                                    <div class="error-form">
+                                        <label for="email">Email Address</label>
+                                        <div class="email-error"></div>
+                                    </div>
+                                    <input class="form__input" name="email" id="email" type="email"
+                                        placeholder="e.g stephenking@lorem.com">
+                                </div>
+                                <div class="formulario__input">
+                                    <div class="error-form">
+                                        <label for="tel">Phone Number</label>
+                                        <div class="tel-error"></div>
+                                    </div>
+                                    <input class="form__input" name="tel" id="tel" type="tel"
+                                        placeholder="e.g + 1234 567 890">
+                                </div>
+
+                                <div class="desktop__flex__btn">
+                                    <button type="button" class="desktop__btn__submit button__desktop__back">
+                                        Go back
+                                    </button>
+                                    <button type="button" class="desktop__btn__submit button__desktop">
+                                        Next Step
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <section class="step">
+                            <div class="formulario__flex">
+                                <div class="formulario__input">
+                                    <div class="general-error"></div>
+                                    <div class="error-form">
+                                        <label for="name">Name</label>
+                                        <div class="name-error"></div>
+                                    </div>
+                                    <input class="form__input" name="name" id="name" type="text"
+                                        placeholder="e.g Stephen King">
+                                </div>
+                                <div class="formulario__input">
+                                    <div class="error-form">
+                                        <label for="email">Email Address</label>
+                                        <div class="email-error"></div>
+                                    </div>
+                                    <input class="form__input" name="email" id="email" type="email"
+                                        placeholder="e.g stephenking@lorem.com">
+                                </div>
+                                <div class="formulario__input">
+                                    <div class="error-form">
+                                        <label for="tel">Phone Number</label>
+                                        <div class="tel-error"></div>
+                                    </div>
+                                    <input class="form__input" name="tel" id="tel" type="tel"
+                                        placeholder="e.g + 1234 567 890">
+                                </div>
+
+                                <div class="desktop__flex__btn">
+                                    <button type="button" class="desktop__btn__submit button__desktop__back">
+                                        Go back
+                                    </button>
+                                    <button type="button" class="desktop__btn__submit button__desktop">
+                                        Next Step
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <section class="footer__tabInfo__flex">
+                <button type="button" id="button-previous" disabled class="footer__tabInfo__button button-none button__previous button__mobile__back">
+                    Go back
+                </button>
+                <button type="button" id="button" class="footer__tabInfo__button button__next">
+                    Next Step
+                </button>
+            </section>
+        </div>
+    </footer>
+</body>
+
+<script src="./assets/js/index.js"></script>
+
+</html>
