@@ -205,7 +205,7 @@ button {
 @media (min-width: 450px) {
     .main__tabInfo {
         margin-top: -7rem;
-        max-width: 500px;
+        width: 420px;
         margin: auto;
     }
 }
@@ -596,7 +596,7 @@ input[type="radio"]:checked~.step2__radiobutton {
     #button-2 .knobs:after {
         content: "";
         position: absolute;
-        top: 3px;
+        top: 2.33px;
         width: 5px;
         height: 4px;
         color: #fff;
