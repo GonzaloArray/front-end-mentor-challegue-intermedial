@@ -135,6 +135,11 @@ button {
     border-radius: .8rem;
     width: 340px;
 }
+@media (min-width: 768px) {
+    .main__tabInfo {
+        padding: 0;
+    }
+}
 
 .tabInfo__title {
     font-size: 1.5rem;
@@ -173,7 +178,10 @@ button {
     padding: 1rem;
     border-radius: .2rem;
     border: 1px solid #00000045;
-    color: #00000039;
+    color: #000000;
+}
+.form__input:placeholder{
+    color: rgba(0, 0, 0, 0.365);
 }
 
 /* Footer */
@@ -181,11 +189,27 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
 }
 
 .footer {
     background-color: var(--white);
     padding: .1rem 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+@media (min-width: 768px) {
+    .footer {
+        background-color: transparent;
+        padding: .1rem 0;
+        margin: 1rem 0;
+        position: relative;
+    }
+    .footer__tabInfo__flex {
+        padding: 0;
+    }
 }
 
 .footer__tabInfo__button {
@@ -418,12 +442,12 @@ input[type="radio"]:checked~.step2__radiobutton {
 }
 
 .radio__title {
-    font-size: 19px;
+    font-size: 16px;
     font-weight: 600;
 }
 
 .radio__descrip {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 400;
     color: gray;
 }
@@ -579,6 +603,7 @@ input[type="radio"]:checked~.step2__radiobutton {
         font-size: 10px;
         font-weight: 600;
     }
+
     .checkbox__flex {
         margin-top: .2rem;
         display: flex;
@@ -609,11 +634,121 @@ input[type="radio"]:checked~.step2__radiobutton {
         border-radius: 50%;
         transition: 0.3s ease all;
     }
+
     #button-2 .checkbox:checked+.knobs:before {
         left: 17px;
     }
-    
+
     #button-2 .checkbox:checked+.knobs:after {
         right: -22px;
     }
+}
+
+/* Step 3 */
+.step3__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: .4rem;
+    border: 1px solid rgba(128, 128, 128, 0.386);
+    padding: .9rem 1rem;
+
+    position: relative;
+}
+
+.step3__child__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1.2rem;
+}
+
+.step3__checkbox {
+    -ms-transform: scale(1.5);
+    /* IE */
+    -moz-transform: scale(1.5);
+    /* FF */
+    -webkit-transform: scale(1.5);
+    /* Safari y Chrome */
+    -o-transform: scale(1.5);
+    /* Opera */
+    padding: 10px;
+    z-index: 1;
+}
+.border{
+    position: absolute;
+}
+.step3__checkbox:checked ~ .border{
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border: 1px solid var(--marine--blue)!important;
+    border-radius: .4rem;
+
+}
+.step__child__contain {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.step3__span {
+    color: gray;
+    font-size: 14px;
+}
+.step__4{
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+}
+.step4__container{
+    background-color: #022a5a0f;
+}
+.step__4Style{
+    padding: 1rem;
+    border-radius: .5rem;
+    border-bottom: 1px solid #00000042;
+}
+
+.step4__total{
+    font-size: 16px;
+    font-weight: lighter;
+    color: rgba(128, 128, 128, 0.663);
+}
+.step__total{
+    font-size: 17px;
+    color: var(--marine--blue);
+    font-weight: bold;
+    font-family: 'Ubuntu Regular';
+}
+.step__info{
+    padding: 1rem;
+}
+.step__padding{
+    padding: 1rem;
+}
+.check__title{
+    font-size: 14px;
+    color: #00000068;
+}
+.final__step{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.final__description{
+    text-align: center;
+    font-size: 19px;
+    line-height: 1.6rem;
+    color: gray;
+    margin: 0 1rem;
+}
+.border__descrip{
+    border-bottom: 1px solid gray;
+    padding-top: .3rem;
+    font-size: 10px;
+    padding-bottom: .1rem;
 }
