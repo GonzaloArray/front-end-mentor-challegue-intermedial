@@ -110,7 +110,6 @@ function startApp() {
 function handleSubmit(e) {
     e.preventDefault();
     if (count >= 4) {
-        console.log("hello world")
         success.innerHTML = `
             <section>
                 <div class="final__step">
@@ -134,7 +133,6 @@ function handleGame() {
     const trueCheck = check.filter(inputCheck => inputCheck.checked);
     const valueCheck = trueCheck.map(check => check.value)
     const dataFilter = data.filter(elem => elem.title == valueCheck[0]);
-    console.log(dataFilter)
     result = dataFilter;
 }
 
@@ -158,13 +156,11 @@ function handleSub() {
 }
 
 function handleNext() {
-    if (name.value == "" && email.value == "" && tel.value == "") {
-        mostrarError('general', 'Please complete name, email and phone number');
-        return;
-    } else if (name.value == "") {
+
+    if (name.value == "") {
         mostrarError('name', 'Please enter a name valid');
         return;
-    } else if (email.value == "") {
+    } else if (!email.value.includes('@') || email.value == '') {
         mostrarError('email', 'Please enter a email valid');
         return;
     } else if (tel.value == "") {
@@ -225,7 +221,6 @@ function handleNext() {
     if (count <= 3) ++count;
 
     if (count == 3) {
-        console.log(count);
         button__step.type = 'submit';
         button__step.textContent = 'Submit';
     }
