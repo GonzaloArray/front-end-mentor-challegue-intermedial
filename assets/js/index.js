@@ -270,14 +270,21 @@ function handlePreviou() {
 
 function mostrarError(error, message) {
     const errorLocation = document.querySelector(`.${error}-error`);
+    const errorquery = document.querySelector('.error');
 
+    if (!errorquery) {
+        errorLocation.classList.add('error');
+        const text = document.createElement('p');
+        text.classList.add('error');
+        text.textContent = message;
+        errorLocation.appendChild(text);
 
-    errorLocation.classList.add('error');
+        setTimeout(() => {
+            errorLocation.textContent = ""
+            errorLocation.classList.remove('error');
+        }, 2000);
+    }
 
-    const text = document.createElement('p');
-    text.classList.add('error');
-    text.textContent = message;
-    errorLocation.appendChild(text);
 
 }
 

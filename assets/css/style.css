@@ -269,10 +269,6 @@ button {
         margin: auto;
     }
 
-    .main__desktop__flex {
-        flex: 1;
-    }
-
     .main__tabInfo {
         flex: 1;
     }
@@ -340,7 +336,7 @@ button {
 }
 
 .aside__img {
-    height: 92.7vh;
+    height: 480px;
 }
 
 .desktop__flex__btn {
@@ -353,7 +349,14 @@ button {
         justify-content: space-between;
         align-items: center;
     }
-
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .desktop__flex{
+        height: 500px;
+    }
     .button__desktop__back {
         background-color: var(--light--gray) !important;
         color: gray !important;
